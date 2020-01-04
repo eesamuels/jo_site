@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import vuetify from './plugins/vuetify';
+import vuetify from './plugins/vuetify'
 import router from './router'
-import VueFirestore from 'vue-firestore';
+import VueFirestore from 'vue-firestore'
+import lo from 'lodash';
 
 Vue.config.productionTip = false
 Vue.use(VueFirestore)
