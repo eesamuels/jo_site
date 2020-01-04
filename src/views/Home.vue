@@ -5,24 +5,24 @@
        <div  class="mx-auto" style="width:85%" >
         <div d-inline-block id="nav">
       <span left> <v-img height="100" contain :src="`https://firebasestorage.googleapis.com/v0/b/to-do-ac295.appspot.com/o/signature.png?alt=media&token=491b826d-2db0-4bd7-b1ca-d910d1a10e5c`" /> </span> 
-      <span right> PORTFOLIO | ABOUT | CONTACT </span>
+      <span right> GALLERY | ABOUT | CONTACT </span>
       <br> &nbsp; <br>
     </div>
         <v-card>  
           <v-container fluid>
             <!--- Row Start --->
             <v-container v-for="painting in paintings" :key="painting">
-            <v-row>
+            <v-row mx-auto>
               <!--- Picture 1 --->
               
               <v-col
                 class="d-flex child-flex"
-                cols="4"
+                cols="6"
               >
-                <v-card :elevation="4" flat tile class="d-flex">
+                <v-card :elevation="5" flat tile class="d-flex">
                   <v-img
                     :src="painting.img"
-                    aspect-ratio="1"
+                    aspect-ratio="0.75"
                     class="grey lighten-2"
                   >
                     <template v-slot:placeholder>
@@ -36,6 +36,17 @@
                     </template>
                   </v-img>
                 </v-card >
+              </v-col>
+              <v-col
+              class="d-flex child-flex mx-auto"
+              cols="5"
+              align-self="center"
+              >
+            <v-card :elevation="6" flat tile class="d-flex px-4" style="height: 75%; padding-top: 40px;">
+              {{ painting.title }}  <br><br><br>
+              {{ painting.artist_statement }} <br><br>
+              {{ painting.meta }} <br><br>
+            </v-card>
               </v-col>
             </v-row>
             </v-container>
